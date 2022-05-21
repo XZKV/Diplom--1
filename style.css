@@ -1,22 +1,42 @@
 @font-face  {
-    font-family: "Open Sans";
-    src: url(src/OpenSans/OpenSans-Regular.woff);
+    font-family: "Open Sans Regular";
+    src: url(src/OpenSans/OpenSans-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face  {
-    font-family: "Open Sans";
-    src: url(src/OpenSans/OpenSans-Bold.woff);
+    font-family: "Open Sans Bold";
+    src: url(src/OpenSans/OpenSans-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
 }
 
-*{
-    font-family: Open Sans, sans-serif;
+body {
+    font-family: "Open Sans Regular", sans-serif;
     margin: 0;
-    padding: 0;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+figure {
+    margin: 0;
 }
 
 .hidden-form {
@@ -36,6 +56,8 @@
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
 }
+
+/* ====== HEADER ====== */
 
 .wrapper {
     background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
@@ -69,9 +91,6 @@
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
-
-    font-family: Open Sans, sans-serif;
-    font-weight: 400;
 }
 
 .hat {
@@ -95,6 +114,7 @@
 }
 
 .menu__item__link {
+    text-transform: uppercase;
     text-decoration: none;
     color: white;
     font-size: 13px;
@@ -105,8 +125,6 @@
 }
 
 .header {
-    font-family: Open Sans, sans-serif;
-
     width: 690px;
 
     padding-bottom: 100px;
@@ -114,11 +132,18 @@
     margin: auto;
 
     text-align: center;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     font-size: 45px;
     line-height: 1.65em;
     color: white;
 }
+
+.blog {
+    text-transform: uppercase;
+}
+
+/* ====== MAIN ====== */
 
 .main__container {
     max-width: 1200px;
@@ -126,11 +151,13 @@
     justify-content: space-between;
 
     margin: auto;
+    margin-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
+}
 
-    font-family: Open Sans, sans-serif;
-    font-weight: 400;
+.main {
+    width: 780px;
 }
 
 .last__post__link {
@@ -143,7 +170,9 @@
 
 .last__post {
     display: flex;
-    width: 780px;
+}
+
+.last__post:not(:last-child) {
     margin-bottom: 60px;
 }
 
@@ -155,17 +184,20 @@
     display: flex;
 
     list-style: none;
+    
+    margin-bottom: 10px;
+}
+
+.last__post__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.last__post__link__hover {
     text-transform: uppercase;
     font-size: 14px;
     color: #b59f5b;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
-    
-}
-
-.last__post__item {
-    margin-right: 15px;
-    margin-bottom: 10px;
 }
 
 .last__post__link__hover:hover {
@@ -175,7 +207,7 @@
 .last__post__header {
     text-transform: uppercase;
     font-size: 20px;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     margin-bottom: 28px;
 }
@@ -191,8 +223,6 @@
 .last__post__date {
     font-size: 12px;
     color: #888888;
-    font-family: Open Sans, sans-serif;
-    font-weight: 400;
     margin-right: 10px;
 }
 
@@ -200,7 +230,7 @@
     font-size: 12px;
     text-decoration: none;
     color: #000000;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
 }
 
@@ -216,16 +246,23 @@
     line-height: 1.5;
 }
 
+.last__post__paragraph:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* ====== ASIDE ====== */
+
 .aside {
     width: 270px;
 }
 
-.aside__box {
+.aside__box:not(:last-child) {
     margin-bottom: 60px;
 }
 
 .aside__box__name {
     font-size:14px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     color:#0f0d0e;
 
@@ -257,6 +294,7 @@
 }
 
 .aside__post__date {
+    display: block;
     font-weight: 400;
 	font-size:12px;
 	color:#000000;
@@ -265,6 +303,7 @@
 
 .aside__post__link {
 	font-size:14px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
 	color:#000000;
 
@@ -276,10 +315,19 @@
     color: #b59f5b;
 }
 
+/* ====== SEARCH ====== */
+
+.form {
+    position: relative;
+
+	width: 270px;
+}
+
 .form__search {
     position: relative;
 
 	width: 270px;
+    margin-top: 60px;
 }
 
 .search {
@@ -322,6 +370,8 @@
     background-color: #323232;
 }
 
+/* ====== SUBSCRIBE ====== */
+
 .subscribe {
 	width: 270px;
     height: 50px;
@@ -341,6 +391,7 @@
 }
 
 .subscribe__button {
+    width: 270px;
     height: 50px;
 
     padding: 10px 85px;
@@ -348,6 +399,7 @@
 	border: none;
 	
 	font-size: 14px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -359,6 +411,8 @@
 	background: #323232;
     cursor: pointer;
 }
+
+/* ====== TAGS ====== */
 
 .tags__list {
     display: flex;
@@ -383,6 +437,7 @@
 
 	
     font-size: 12px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     color: #0f0d0e;
     text-decoration: none;
@@ -395,29 +450,24 @@
     border: 3px solid #b59f5b;
 }
 
+/* ====== THEMES ====== */
+
 .themes__list {
 	list-style-type: none;
 }
 
 .themes__item {
 	padding-bottom: 15px;
-}
-
-.themes__item::after {
-    content:"";
-    display: block;
-
-    margin-top: 12px;
-    height: 1px;
-
-    background: #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 15px;
 }
 
 .themes__item__link {
 	text-decoration: none;
 	color: #000000;
 	font-size: 14px;
-	font-weight: 700;
+	font-family: "Open Sans Bold", sans-serif;
+    font-weight: 700;
 }
 
 .themes__item__link:hover {
@@ -427,13 +477,19 @@
 .themes__amount {
 	color: #b59f5b;
 	font-size: 12px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     vertical-align: super;
 }
 
+/* ====== FOOTER ====== */
+
 .footer {
-    display: block;
+    max-width: 1200px;
     width: 100%;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .follow {
@@ -477,11 +533,8 @@
     margin-bottom: 40px;
 
     font-size: 12px;
+    font-family: "Open Sans Bold", sans-serif;
     font-weight: 700;
     color: #999999;
     text-align: center;
-}
-
-.copyright-link {
-    text-decoration: none;
 }
