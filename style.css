@@ -19,8 +19,26 @@
     box-sizing: border-box;
 }
 
+.hidden-form {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.hidden-icon {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
 .wrapper {
-    background-image: url(src/banner-bg.jpeg);
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -86,7 +104,9 @@
     text-decoration: underline;
 }
 
-.blog {
+.header {
+    font-family: Open Sans, sans-serif;
+
     width: 690px;
 
     padding-bottom: 100px;
@@ -94,10 +114,6 @@
     margin: auto;
 
     text-align: center;
-}
-
-.header {
-    font-family: Open Sans, sans-serif;
     font-weight: 700;
     font-size: 45px;
     line-height: 1.65em;
@@ -123,8 +139,6 @@
     color: inherit;
     font-family: inherit;
     font-weight: inherit;
-    margin-right: inherit;
-    margin-bottom: inherit;
 }
 
 .last__post {
@@ -138,11 +152,18 @@
 }
 
 .last__post__tags {
+    display: flex;
+
+    list-style: none;
     text-transform: uppercase;
     font-size: 14px;
     color: #b59f5b;
     font-family: Open Sans, sans-serif;
     font-weight: 700;
+    
+}
+
+.last__post__item {
     margin-right: 15px;
     margin-bottom: 10px;
 }
@@ -177,9 +198,14 @@
 
 .last__post__author {
     font-size: 12px;
+    text-decoration: none;
     color: #000000;
     font-family: Open Sans, sans-serif;
     font-weight: 700;
+}
+
+.last__post__author:hover {
+    color: #b59f5b;
 }
 
 .last__post__description {
@@ -283,7 +309,7 @@
 
 	border: none;
 
-    background-image: url(src/search.svg);
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: center;
@@ -435,15 +461,15 @@
 }
 
 .social-icon__twitter {
-    background-image: url(src/footer/twitter.svg);
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
 }
 
 .social-icon__pinterest {
-    background-image: url(src/footer/pinterest.svg);
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
 }
 
 .social-icon__tumbler {
-    background-image: url(src/footer/tumblr.svg);
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
 }
 
 .copyright {
@@ -454,4 +480,8 @@
     font-weight: 700;
     color: #999999;
     text-align: center;
+}
+
+.copyright-link {
+    text-decoration: none;
 }
